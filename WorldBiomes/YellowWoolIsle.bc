@@ -1,0 +1,20 @@
+# This is the biome config file of the YellowWoolIsle biome, which is a custom biome.
+
+#######################################################################
+# +-----------------------------------------------------------------+ #
+# |                        Biome Inheritance                        | #
+# +-----------------------------------------------------------------+ #
+#######################################################################
+
+# This should be the value of the biomeConfig you wish to extend.
+# The extended config will be loaded, at which point the configs included below
+# will overwrite any configs loaded from the extended config.
+BiomeExtends: YellowWool
+
+IsleInBiome: YellowWool
+
+BiomeSize: 8
+
+BiomeRarity: 99
+
+BiomeColor: 0xFFFFFF

@@ -5,8 +5,10 @@ World used to test features of Terrain Control.
 
 Included tests:
 
-* VirtualBiomes (YellowWool biome)
+* Virtual biomes using ReplaceToBiomeName (YellowWool biome)
 * SurfaceAndGroundControl (YellowWool biome)
+* Biome inheritance (YellowWoolIsle biome)
+* Isle biome (YellowWoolIsle biome)
 * Various BO3 spawn tests (YellowWool biome)
     * Yellow BO3s should only spawn on the yellow wool
     * Red BO3s should only spawn on the red wool, in high quantities
