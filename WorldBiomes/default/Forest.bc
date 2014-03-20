@@ -36,8 +36,7 @@ BiomeRarity: 100
 # and used in the input of BiomeMode:FromImage.
 BiomeColor: 0x056621
 
-# Replace this biome to specified after all generations. Warning this will cause saplings and mob spawning work as in specified biome
-ReplaceToBiomeName: 
+# (ReplaceToBiomeName is only available in custom biomes.)
 
 ####################
 # Isle biomes only #
