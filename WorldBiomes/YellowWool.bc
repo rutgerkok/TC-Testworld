@@ -39,7 +39,7 @@ BiomeColor: 0xFFFF00
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.
-ReplaceToBiomeName: Desert
+ReplaceToBiomeName: 
 
 ####################
 # Isle biomes only #
@@ -315,10 +315,12 @@ CustomObject(yellowwoolpillar,redwoolpillar,orangewoolpillar,graywoolpillar)
 # The syntax is: Sapling(SaplingType,TreeType,TreeType_Chance[,Additional_TreeType,Additional_TreeType_Chance.....])
 # Works like Tree resource instead first parameter.
 
-# Sapling types: All, Oak, Redwood, Birch, SmallJungle, BigJungle, RedMushroom, BrownMushroom
+# Sapling types: All, Oak, Redwood, Birch, SmallJungle, BigJungle, RedMushroom, BrownMushroom, Acacia, DarkOak, HugeRedwood
 # All - will make the tree spawn from all saplings, but not from mushrooms.
 # BigJungle - for when 4 jungle saplings grow at once.
 # RedMushroom/BrownMushroom - will only grow when bonemeal is used.
+Sapling(Redwood,woolredwood,100)
+Sapling(DarkOak,wooldarkoak,100)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #

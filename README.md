@@ -16,3 +16,4 @@ Included tests:
     * Gray wool should spawn on any solid block except yellow wool, even under terrain overhangs
 * ReplacedBlocks with and without height limits (ReplacedBlocks biome)
 * RiverWaterLevel should be ignored in ReplacedBlocks biome, as it has UseWorldWaterLevel: false
+* 1x1 and 2x2 trees growing from saplings (Redwood and DarkOak, YellowWool(Isle) biome)
