@@ -331,7 +331,7 @@ Well(SANDSTONE,STEP:1,WATER,1,0.1,2,256,SAND)
 # The syntax is: Sapling(SaplingType,TreeType,TreeType_Chance[,Additional_TreeType,Additional_TreeType_Chance.....])
 # Works like Tree resource instead first parameter.
 
-# Sapling types: All, Oak, Redwood, Birch, SmallJungle, BigJungle, RedMushroom, BrownMushroom
+# Sapling types: All, Oak, Redwood, Birch, SmallJungle, BigJungle, RedMushroom, BrownMushroom, Acacia, DarkOak, HugeRedwood
 # All - will make the tree spawn from all saplings, but not from mushrooms.
 # BigJungle - for when 4 jungle saplings grow at once.
 # RedMushroom/BrownMushroom - will only grow when bonemeal is used.
