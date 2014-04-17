@@ -301,6 +301,7 @@ FoliageColorIsMultiplier: true
 # CustomStructure resource: starts a BO3 structure in the chunk.
 
 CustomObject(yellowwoolpillar,redwoolpillar,orangewoolpillar,graywoolpillar)
+CustomObject(bluewool33blocks)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
