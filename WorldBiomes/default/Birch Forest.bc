@@ -34,7 +34,7 @@ BiomeRarity: 100
 
 # The hexadecimal color value of this biome. Used in the output of the /tc map command,
 # and used in the input of BiomeMode:FromImage.
-BiomeColor: 0x307444
+BiomeColor: #307444
 
 # (ReplaceToBiomeName is only available in custom biomes.)
 
@@ -103,7 +103,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Make empty layer above bedrock layer. 
-CustomHeightControl: 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
 
 
 #######################################################################
@@ -141,7 +141,7 @@ RiverVolatility: 0.3
 RiverWaterLevel: 63
 
 # Works the same as CustomHeightControl (scroll up), but is used where a river is generated in this biome
-RiverCustomHeightControl: 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+RiverCustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
 
 
 #######################################################################
@@ -215,13 +215,13 @@ BiomeTemperature: 0.6
 BiomeWetness: 0.6
 
 # Biome sky color.
-SkyColor: 0x7ba5ff
+SkyColor: #7BA5FF
 
 # Biome water color multiplier.
-WaterColor: 0xffffff
+WaterColor: #FFFFFF
 
 # Biome grass color.
-GrassColor: 0xffffff
+GrassColor: #FFFFFF
 
 # Whether the grass color is a multiplier.
 # If you set it to true, the color will be based on this value, the BiomeTemperature and the BiomeWetness.
@@ -229,7 +229,7 @@ GrassColor: 0xffffff
 GrassColorIsMultiplier: true
 
 # Biome foliage color.
-FoliageColor: 0xffffff
+FoliageColor: #FFFFFF
 
 # Whether the foliage color is a multiplier. See GrassColorIsMultiplier for details.
 FoliageColorIsMultiplier: true
