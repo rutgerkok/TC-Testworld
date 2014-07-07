@@ -11,6 +11,8 @@
 # will overwrite any configs loaded from the extended config.
 BiomeExtends: YellowWool
 
+ResourceInheritance: false
+
 IsleInBiome: YellowWool
 
 BiomeSize: 8
@@ -18,3 +20,5 @@ BiomeSize: 8
 BiomeRarity: 99
 
 BiomeColor: 0xFFFFFF
+
+SurfaceAndGroundControl: WOOL:3, WOOL, 4.0, WOOL:14, WOOL, 4.6, WOOL:3, WOOL, 10.0 

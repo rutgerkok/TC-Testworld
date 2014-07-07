@@ -383,4 +383,19 @@ RareBuildingType: disabled
 # +-----------------------------------------------------------------+ #
 #######################################################################
 
-# Mob spawning control doesn't work in default biomes.
+# It's not possible to change mob spawns in vanilla biomes. These
+# are the values used by vanilla for this biome. They are read-only:
+# changes to this setting are ignored and overwritten.
+
+# The monsters (skeletons, zombies, etc.) that spawn in this biome
+SpawnMonsters: [{"mob": "Enderman", "weight": 10, "min": 4, "max": 4}]
+
+# The friendly creatures (cows, pigs, etc.) that spawn in this biome
+SpawnCreatures: []
+
+# The water creatures (only squids in vanilla) that spawn in this biome
+SpawnWaterCreatures: []
+
+# The ambient creatures (only bats in vanila) that spawn in this biome
+SpawnAmbientCreatures: []
+

@@ -371,18 +371,17 @@ RareBuildingType: disabled
 # +-----------------------------------------------------------------+ #
 #######################################################################
 
-# ========<TUTORIAL>========
-# This is where you configure mob spawning. Changing this section is optional.
+# This is where you configure mob spawning. Mobs spawn in groups,
+# see http://minecraft.gamepedia.com/Spawn#Mob_spawning
 
-# #STEP1: Understanding what a mobgroup is.
 # A mobgroups is made of four parts. They are mob, weight, min and max.
 # The mob is one of the Minecraft internal mob names.
-# See http://www.minecraftwiki.net/wiki/Chunk_format#Mobs
+# See http://minecraft.gamepedia.com/Chunk_format#Mobs
 # The weight is used for a random selection. This is a positive integer.
 # The min is the minimum amount of mobs spawning as a group. This is a positive integer.
 # The max is the maximum amount of mobs spawning as a group. This is a positive integer.
 
-# #STEP2: Understanding how write a mobgroup as JSON as well as lists of them.
+# Mob groups are written to the config files in Json.
 # Json is a tree document format: http://en.wikipedia.org/wiki/JSON
 # Write a mobgroup like this: {"mob": "mobname", "weight": integer, "min": integer, "max": integer}
 # For example: {"mob": "Ocelot", "weight": 10, "min": 2, "max": 6}
@@ -391,42 +390,19 @@ RareBuildingType: disabled
 # This would be an ampty list: []
 # You can validate your json here: http://jsonlint.com/
 
-# #STEP3: Understanding what to do with all this info
-# There are three categories of mobs: monsters, creatures and watercreatures.
-# These list may be populated with Default values if thee booleans bellow is set to true
-# You may also add your own mobgroups in the lists below
+# There are four categories of mobs: monsters, creatures, water creatures and ambient creatures.
+# In custom biomes, you can add your own mobgroups in the lists below. In the vanilla biomes,
+# your changes are ignored.
 
-# #STEP4: What is in the default mob groups?
-# The default mob groups are controlled by vanilla minecraft.
-# At 2012-03-24 you could find them here: https://github.com/Bukkit/mc-dev/blob/master/net/minecraft/server/BiomeBase.java#L75
-# In simple terms:
-# default creatures: [{"mob": "Sheep", "weight": 12, "min": 4, "max": 4}, {"mob": "Pig", "weight": 10, "min": 4, "max": 4}, {"mob": "Chicken", "weight": 10, "min": 4, "max": 4}, {"mob": "Cow", "weight": 8, "min": 4, "max": 4}]
-# default monsters: [{"mob": "Spider", "weight": 10, "min": 4, "max": 4}, {"mob": "Zombie", "weight": 10, "min": 4, "max": 4}, {"mob": "Skeleton", "weight": 10, "min": 4, "max": 4}, {"mob": "Creeper", "weight": 10, "min": 4, "max": 4}, {"mob": "Slime", "weight": 10, "min": 4, "max": 4}, {"mob": "Enderman", "weight": 1, "min": 1, "max": 4}]
-# default watercreatures: [{"mob": "Squid", "weight": 10, "min": 4, "max": 4}]
+# The monsters (skeletons, zombies, etc.) that spawn in this biome
+SpawnMonsters: [{"mob": "Spider", "weight": 100, "min": 4, "max": 4}, {"mob": "Zombie", "weight": 100, "min": 4, "max": 4}, {"mob": "Skeleton", "weight": 100, "min": 4, "max": 4}, {"mob": "Creeper", "weight": 100, "min": 4, "max": 4}, {"mob": "Slime", "weight": 100, "min": 4, "max": 4}, {"mob": "Enderman", "weight": 10, "min": 1, "max": 4}, {"mob": "Witch", "weight": 5, "min": 1, "max": 1}]
 
-# So for example ocelots wont spawn unless you add them below.
-# ========<CONFIGURATION>========
-# Should we add the default monster spawn groups?
-SpawnMonstersAddDefaults: true
+# The friendly creatures (cows, pigs, etc.) that spawn in this biome
+SpawnCreatures: [{"mob": "Sheep", "weight": 12, "min": 4, "max": 4}, {"mob": "Pig", "weight": 10, "min": 4, "max": 4}, {"mob": "Chicken", "weight": 10, "min": 4, "max": 4}, {"mob": "Cow", "weight": 8, "min": 4, "max": 4}]
 
-# Add extra monster spawn groups here
-SpawnMonsters: []
+# The water creatures (only squids in vanilla) that spawn in this biome
+SpawnWaterCreatures: [{"mob": "Squid", "weight": 10, "min": 4, "max": 4}]
 
-# Should we add the default creature spawn groups?
-SpawnCreaturesAddDefaults: true
-
-# Add extra creature spawn groups here
-SpawnCreatures: []
-
-# Should we add the default watercreature spawn groups?
-SpawnWaterCreaturesAddDefaults: true
-
-# Add extra watercreature spawn groups here
-SpawnWaterCreatures: []
-
-# Should we add the default ambient creature spawn groups? (Currently only bats)
-SpawnAmbientCreaturesAddDefaults: true
-
-# Add extra ambient creature spawn groups here
-SpawnAmbientCreatures: []
+# The ambient creatures (only bats in vanila) that spawn in this biome
+SpawnAmbientCreatures: [{"mob": "Bat", "weight": 10, "min": 8, "max": 8}]
 
