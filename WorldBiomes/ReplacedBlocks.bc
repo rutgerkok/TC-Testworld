@@ -112,7 +112,7 @@ DisableBiomeHeight: false
 # Example:
 #   CustomHeightControl:0.0,-2500.0,0.0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 # Make empty layer above bedrock layer. 
-CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+CustomHeightControl: 0.0, 0.0, -2500.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
 
 
 #######################################################################
@@ -194,12 +194,12 @@ ReplacedBlocks: (GRASS,DIRT:2)
 #################
 
 # Set this to false to use the water and ice settings of this biome.
-UseWorldWaterLevel: true
+UseWorldWaterLevel: false
 
 # Set water level. Every empty between this levels will be fill water or another block from WaterBlock.
 WaterLevelMax: 63
 
-WaterLevelMin: 0
+WaterLevelMin: 25
 
 # Block used as water in WaterLevelMax
 WaterBlock: STATIONARY_WATER
