@@ -18,3 +18,4 @@ Included tests:
 * RiverWaterLevel should be ignored in ReplacedBlocks biome, as it has UseWorldWaterLevel: false
 * 1x1 and 2x2 trees growing from saplings (Redwood and DarkOak, YellowWool(Isle) biome)
 * CustomHeightControl that causes giant cave around y = 10 (ReplacedBlocks biome)
+* Small cobblestone BO3 structure of two pieces spawns (ReplacedBlocks biome)
