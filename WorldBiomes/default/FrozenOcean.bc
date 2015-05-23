@@ -26,20 +26,23 @@ ResourceInheritance: true
 
 # Biome size from 0 to GenerationDepth. Defines in which biome layer this biome will be generated (see GenerationDepth).
 # Higher numbers give a smaller biome, lower numbers a larger biome.
-# Oceans and rivers are generated using a dirrerent algorithm in the default settings,
-# (they aren't in one of the biome lists), so this setting won't affect them.
+# Note: only applies to biomes spawned as part of a BiomeGroup (see WorldConfig).
+# For biomes spawned as isles, borders or rivers other settings are available.
+# Isle biomes:   BiomeSizeWhenIsle (see below)
+# Border biomes: BiomeSizeWhenBorder (see below)
+# River biomes:  RiverSize (see WorldConfig)
 BiomeSize: 4
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
 #   100 rarity mean 1/6 chance than other ( with 6 default normal biomes).
 #   50 rarity mean 1/11 chance than other
-# For isle biome this is chance to spawn isle in good place.
-# Don`t work on Ocean and River (frozen versions too) biomes until not added as normal biome.
+# For isle biomes see the BiomeRarityWhenIsle setting below.
+# Doesn`t work on Ocean and River (frozen versions too) biomes when not added as normal biome.
 BiomeRarity: 100
 
 # The hexadecimal color value of this biome. Used in the output of the /tc map command,
-# and used in the input of BiomeMode:FromImage.
+# and used in the input of BiomeMode: FromImage.
 BiomeColor: #FFFFFF
 
 # (ReplaceToBiomeName is only available in custom biomes.)
@@ -48,18 +51,43 @@ BiomeColor: #FFFFFF
 # Isle biomes only #
 ####################
 
-# Biome name list where this biome will be spawned as isle. Like Mushroom isle in Ocean.  This work only if this biome is in IsleBiomes in world config
+# To spawn a biome as an isle, you need to add it first to the
+# IsleBiomes list in the WorldConfig.
+
+# List of biomes in which this biome will spawn as an isle.
+# For example, Mushroom Isles spawn inside the Ocean biome.
 IsleInBiome: 
+
+# Size of this biome when spawned as an ilse biome.
+# Valid values range from 0 to GenerationDepth.
+# Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
+# to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
+BiomeSizeWhenIsle: 4
+
+# Rarity of this biome when spawned as an ilse biome.
+BiomeRarityWhenIsle: 100
 
 ######################
 # Border biomes only #
 ######################
 
-# Biome name list where this biome will be border.Like Mushroom isle shore. Use is compared as IsleInBiome
+# To spawn a biome as a border, you need to add it first to the
+# BorderBiomes list in the WorldConfig.
+
+# List of biomes this biome can be a border of.
+# For example, the Beach biome is a border on the Ocean biome, so
+# it can spawn anywhere on the border of an ocean.
 BiomeIsBorder: 
 
-# Biome name list near border is not applied. 
+# List of biomes that cancel spawning of this biome.
+# For example, the Beach biome will never spawn next to an Extreme Hills biome.
 NotBorderNear: 
+
+# Size of this biome when spawned as a border biome.
+# Valid values range from 0 to GenerationDepth.
+# Larger numbers give *smaller* borders. The biome must be smaller than the biome it's going
+# to spawn in, so the BiomeSizeWhenBorder number must be larger than the BiomeSize of the other biome.
+BiomeSizeWhenBorder: 4
 
 
 #######################################################################
@@ -261,6 +289,7 @@ FoliageColorIsMultiplier: true
 # UnderWaterOre(BlockName,Size,Frequency,Rarity,BlockSource[,BlockSource2,BlockSource3.....])
 # CustomObject(Object[,AnotherObject[,...]])
 # CustomStructure([Object,Object_Chance[,AnotherObject,Object_Chance[,...]]])
+# SurfacePatch(BlockName,DecorationBlockName,MinAltitude,MaxAltitude,BlockSource[,BlockSource2,BlockSource3.....]
 # Tree(Frequency,TreeType,TreeTypeChance[,AdditionalTreeType,AdditionalTreeTypeChance.....])
 # Plant(PlantType,Frequency,Rarity,MinAltitude,MaxAltitude,BlockSource[,BlockSource2,BlockSource3.....])
 # Grass(PlantType,Grouped/NotGrouped,Frequency,Rarity,BlockSource[,BlockSource2,BlockSource3.....])
@@ -363,6 +392,9 @@ BiomeObjects:
 # Disables strongholds for this biome. If there is no suitable biome nearby,
 # Minecraft will ignore this setting.
 StrongholdsEnabled: false
+
+# Whether an Ocean Monument can be placed in this biome.
+OceanMonumentsEnabled: true
 
 # Whether a Nether Fortress can start in this biome. Might extend to neighbor biomes.
 NetherFortressesEnabled: true
