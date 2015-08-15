@@ -187,14 +187,14 @@ RiverCustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 # +-----------------------------------------------------------------+ #
 #######################################################################
 
-# Change this to generate something else than stone in the biome. Doesn't support block data.
+# Change this to generate something else than stone in the biome.
 StoneBlock: STONE
 
-# Surface block, usually GRASS. Doesn't support block data.
 SurfaceBlock: GRASS
+# Surface block, usually GRASS.
 
-# Block from stone to surface, like dirt in most biomes. Doesn't support block data.
 GroundBlock: DIRT
+# Block from stone to surface, like dirt in most biomes.
 
 # Setting for biomes with more complex surface and ground blocks.
 # Each column in the world has a noise value from what appears to be -7 to 7.
