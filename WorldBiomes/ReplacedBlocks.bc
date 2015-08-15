@@ -190,11 +190,11 @@ RiverCustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 # Change this to generate something else than stone in the biome.
 StoneBlock: STONE
 
-SurfaceBlock: GRASS
 # Surface block, usually GRASS.
+SurfaceBlock: DIRT:2
 
-GroundBlock: DIRT
 # Block from stone to surface, like dirt in most biomes.
+GroundBlock: DIRT:1
 
 # Setting for biomes with more complex surface and ground blocks.
 # Each column in the world has a noise value from what appears to be -7 to 7.
@@ -215,7 +215,7 @@ SurfaceAndGroundControl:
 # Example :
 #   ReplacedBlocks: (GRASS,DIRT,100,127),(GRAVEL,GLASS)
 # Replace grass block to dirt from 100 to 127 height and replace gravel to glass on all height 
-ReplacedBlocks: (GRASS,DIRT:2)
+ReplacedBlocks: None
 
 #################
 # Water and ice #
