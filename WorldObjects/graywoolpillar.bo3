@@ -41,13 +41,36 @@ Rarity: 100.0
 # If you set this to true, the BO3 will be placed with a random rotation.
 RotateRandomly: false
 
-# The spawn height of the BO3 - randomY, highestBlock or highestSolidBlock.
+# The spawn height of the BO3 - atMinY, randomY, highestBlock or highestSolidBlock.
 SpawnHeight: randomY
 
-# The height limits for the BO3.
+# The offset from the spawn height to spawn this BO3
+# Ex. SpawnHeight = highestSolidBlock, SpawnHeightOffset = 3; This object will spawn 3 blocks above the highest solid block
+SpawnHeightOffset: 0
+
+# A random amount to offset the spawn location from the spawn offset height
+# Ex. SpawnHeightOffset = 3, SpawnHeightVariance = 3; This object will spawn 3 to 6 blocks above the original spot it would have spawned
+SpawnHeightVariance: 0
+
+##############################
+# Height Limits for the BO3. #
+##############################
+
+# When in randomY mode used as the minimum Y or in atMinY mode as the actual Y to spawn this BO3 at.
 MinHeight: 64
 
+# When in randomY mode used as the maximum Y to spawn this BO3 at.
 MaxHeight: 128
+
+######################
+# Extrusion settings #
+######################
+
+# The style of extrusion you wish to use - BottomDown, TopUp, None (Default)
+ExtrudeMode: None
+
+# The blocks to extrude your BO3 through
+ExtrudeThroughBlocks: AIR
 
 # Objects can have other objects attacthed to it: branches. Branches can also
 # have branches attached to it, which can also have branches, etc. This is the
@@ -85,9 +108,13 @@ OutsideSourceBlock: placeAnyway
 # All the blocks used in the BO3 are listed here. Possible blocks:
 # Block(x,y,z,id[.data][,nbtfile.nbt)
 # RandomBlock(x,y,z,id[:data][,nbtfile.nbt],chance[,id[:data][,nbtfile.nbt],chance[,...]])
-# So RandomBlock(0,0,0,CHEST,chest.nbt,50,CHEST,anotherchest.nbt,100) will spawn a chest at
-# the BO3 origin, and give it a 50% chance to have the contents of chest.nbt, or, if that
-# fails, a 100% percent chance to have the contents of anotherchest.nbt.
+#  So RandomBlock(0,0,0,CHEST,chest.nbt,50,CHEST,anotherchest.nbt,100) will spawn a chest at
+#  the BO3 origin, and give it a 50% chance to have the contents of chest.nbt, or, if that
+#  fails, a 100% percent chance to have the contents of anotherchest.nbt.
+# MinecraftObject(x,y,z,name)
+#  Spawns an object in the Mojang NBT structure format. For example, 
+#  MinecraftObject(0,0,0,minecraft:igloo/igloo_bottom)
+#  spawns the bottom part of an igloo.
 Block(0,0,0,WOOL:8)
 Block(0,1,0,WOOL:8)
 Block(0,2,0,WOOL:8)
